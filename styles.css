@@ -4,8 +4,11 @@
   box-sizing: border-box;
 }
 
+
+/* GLOBAL */
 body {
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 main {
@@ -13,47 +16,30 @@ main {
   line-height: 1.6;
 }
 
+img {
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
 .page-section {
   padding-bottom: 2.5rem;
 }
 
+
 /* HEADER */
 header {
   display: flex;
-  text-align: center;
-  align-items: baseline;
   justify-content: flex-start;
-  background: orange;
-}
-
-@media only screen and (max-width: 940px) {
-  header {
-    /* background: teal; */
-    align-items: center;
-    flex-direction: column;
-  }
-
-  header > nav > ul {
-    flex-direction: column;
-    padding: 0;
-    margin-top:0;
-  }
-
-  .logo {
-    margin-left: 0rem;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-header > nav > ul {
-  justify-content: flex-end;
+  background: #3F292B;
 }
 
 .logo {
   margin-left: 1.5rem;
   width: 10%;
-  text-align: left;
+  color: white;
 }
 
 nav {
@@ -62,8 +48,7 @@ nav {
 
 nav ul {
   display: flex;
-  flex-flow: row wrap;
-  flex-grow: 4;
+  justify-content: flex-end;
   list-style: none;
 }
 
@@ -81,6 +66,78 @@ nav a:hover {
   color: #000;
 }
 
+.nav-toggle {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  right: 1.5rem;
+  top: 2.4rem;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+@media only screen and (max-width: 940px) {
+  header {
+    flex-direction: column;
+  }
+
+  header > nav > ul {
+    flex-direction: column;
+    padding: 0rem;
+    margin-top: 0;
+  }
+
+  nav > ul > a > li {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-toggle:checked ~ nav {
+    height: 0px;
+    opacity: 0;
+  }
+
+  input {
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 940px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  input {
+    display: none;
+  }
+}
+
 /* HERO */
 
 .hero {
@@ -88,13 +145,22 @@ nav a:hover {
   justify-content: space-around;
   align-items: center;
   height: 50vh;
-  border: 2px solid red;
-  background-color: blue;
+  background-color: #DB7F67;
+}
+
+.hero > h1 {
+  font-size: 3vw;
 }
 
 .hero-text {
-  padding: 2rem;
+  padding: 15rem;
   text-align: center;
+}
+
+@media only screen and (max-width: 940px) {
+  .hero > h1 {
+    font-size: 8vw;
+  }
 }
 
 /* PRODUCTS */
@@ -109,24 +175,26 @@ nav a:hover {
 }
 
 .product-item {
-  flex-grow: 2;
-  flex-shrink: 2;
+  flex-grow: 1;
+  flex-shrink: 1;
   flex-basis: auto;
-  margin: 0.5rem;
-  border: 2px solid yellow;
-  background-color: purple;
+  margin: 1rem;
 }
 
-/* HISTORY */
+.product-item > h3 {
+  margin: 0rem;
+}
 
+
+/* HISTORY */
 .history-text {
   padding: 0rem 1rem;
 }
 
-/* DEPARTMENTS */
 
+/* DEPARTMENTS */
 .department {
-  width: 90%;
+  width: 75%;
   margin: auto;
   padding-bottom: 3rem;
 }
@@ -140,29 +208,22 @@ nav a:hover {
   padding: 0em;
 }
 
-.department-container-right {
-  flex-flow: row-reverse wrap;
-}
-
 .department-picture {
   flex: 1;
-  max-width: 20em;
+  max-width: 200px;
 }
 
-.department-container > p {
-  flex: 1;
-  margin: 0em;
-  padding-left: 2rem;
-  min-width: 25rem;
+.department-text > h3 {
+  padding: 0rem 1.5rem;
+  margin: 0;
 }
 
-.department-container-right > p {
-  padding-right: 2rem;
-  padding-left: 0rem;
+.department-text > p {
+  padding: 0rem 1.5rem;
 }
+
 
 /* CAREERS */
-
 .careers {
   width: 100%;
   display: flex;
@@ -183,13 +244,23 @@ nav a:hover {
 }
 
 .careers-cta {
-  border: 1px solid red;
+  border: 2px solid #D34F73;
+  background: #fff;
+  color: #D34F73;
+  border-radius: 50px;
+  font-size: 1.2rem;
   text-decoration: none;
   padding: 1rem 2rem;
 }
 
-/* FOOTER */
+.careers-cta:hover {
+  border: 2px solid #D34F73;
+  background: #D34F73;
+  color: #fff;
+}
 
+
+/* FOOTER */
 .page-footer {
   background-color: indianred;
   margin: 0rem;

@@ -5,31 +5,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schmeideberg Pretzels - Fine German Pretzels</title>
+    <title>Schmeideberg's Pretzels - Makers of Fine German Pretzels</title>
     <link href="./styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   </head>
 
   <body>
+
+   
       
     <header>
         
-      <h1 class="logo">Logo</h1>
+      <h1 class="logo">Schmeideberg's</h1>
+
+      <input type="checkbox" class="nav-toggle" checked="true">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>  
 
       <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Departments</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>Products</li></a>
+            <a href=""><li>History</li></a>
+            <a href=""><li>Departments</li></a>
+            <a href=""><li>Careers</li></a>
+            <a href=""><li>Contact</li></a>
         </ul>
-      </nav>
+      </nav>      
+
     </header>
 
 
     <section class="hero">
-        <h1 class="hero-text">Welcome to Schmeideberg Pretzels</h1>
+        <h1 class="hero-text">Welcome to Schmeideberg's Pretzels</h1>
     </section>
 
 
@@ -38,35 +49,31 @@
             <h2>Products</h2>
             <article class="products">
                 <section class="product-item">
-                    <h3>Product 1</h3>
                     <picture>
-                        <img src="https://dummyimage.com/200/000/fff" alt="placeholder"></img>
+                        <img src="./images/pretzel-1.jpg" alt="placeholder"></img>
                     </picture>
-                    <p>Donec a orci malesuada, commodo nunc ac, varius magna.</p>
+                    <h3>Salted</h3>
                 </section>
 
                 <section class="product-item">
-                    <h3>Product 2</h3>
                     <picture>
-                        <img src="https://dummyimage.com/200/000/fff" alt="placeholder"></img>
+                        <img src="./images/pretzel-2.jpg" alt="placeholder"></img>
                     </picture>
-                    <p>Donec a orci malesuada, commodo nunc ac, varius magna.</p>
+                    <h3>Sugar</h3>
                 </section>
 
-                <section class="product-item">
-                    <h3>Product 3</h3>
+                <section class="product-item">    
                     <picture>
-                        <img src="https://dummyimage.com/200/000/fff" alt="placeholder"></img>
+                        <img src="./images/pretzel-3.jpg" alt="placeholder"></img>
                     </picture>
-                    <p>Donec a orci malesuada, commodo nunc ac, varius magna.</p>
+                    <h3>Holiday</h3>
                 </section>
 
-                <section class="product-item">
-                    <h3>Product 4</h3>
+                <section class="product-item"> 
                     <picture>
-                        <img src="https://dummyimage.com/200/000/fff" alt="placeholder"></img>
+                        <img src="./images/pretzel-4.jpg" alt="placeholder"></img>
                     </picture>
-                    <p>Donec a orci malesuada, commodo nunc ac, varius magna.</p>
+                    <h3>Custom</h3>
                 </section>
             </article>
         </section>
@@ -94,29 +101,33 @@
             <h2>Departments</h2>
 
             <section class="department">
-                <h3 class="department-name">Department of Salt</h3>
-
                 <section class="department-container">
-                        <img src="https://dummyimage.com/200/000/fff" class="department-picture" alt="placeholder"></img>
-                    <p class="department-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh vel egestas egestas. Morbi quis velit mollis, pulvina risus id, venenatis felis. Morbi eget diam id velit hendrerit blandit.</p>
+                    <img src="https://dummyimage.com/200/000/fff" class="department-picture" alt="placeholder"></img>
+                    <div class="department-text">
+                        <h3>Salt Department</h3>
+                        <p>Our experts taste, feel, and examine every grain of salt under a microscope before it goes on to your pretzel.</p>
+                        <p>Taster monekys QA each batch of salt.</p>
+                    </div>
                 </section>
             </section>
 
             <section class="department">
-                <h3 class="department-name">Department of Shapes</h3>
-
-                <section class="department-container department-container-right">
-                        <img src="https://dummyimage.com/200/000/fff" class="department-picture" alt="placeholder"></img>
-                    <p class="department-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh vel egestas egestas. Morbi quis velit mollis, pulvina risus id, venenatis felis. Morbi eget diam id velit hendrerit blandit.</p>
+                <section class="department-container">
+                    <img src="https://dummyimage.com/200/000/fff" class="department-picture" alt="placeholder"></img>
+                    <div class="department-text">
+                        <h3>Shapes Department</h3>
+                        <p>Our experts taste, feel, and examine every grain of salt under a microscope before it goes on to your pretzel.</p>
+                    </div>
                 </section>
             </section>
 
             <section class="department">
-                <h3 class="department-name">Research and Development and Structural and Conceptual Artwork</h3>
-
                 <section class="department-container">
-                        <img src="https://dummyimage.com/200/000/fff" class="department-picture" alt="placeholder"></img>
-                    <p class="department-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet nibh vel egestas egestas. Morbi quis velit mollis, pulvina risus id, venenatis felis. Morbi eget diam id velit hendrerit blandit.</p>
+                    <img src="https://dummyimage.com/200/000/fff" class="department-picture" alt="placeholder"></img>
+                    <div class="department-text">
+                        <h3>Research and Development and Structural and Conceptual Artwork Department</h3>
+                        <p>Our experts taste, feel, and examine every grain of salt under a microscope before it goes on to your pretzel.</p>
+                    </div>
                 </section>
             </section>
 
@@ -129,7 +140,7 @@
             <article class="careers">
                 <section>
                     <img src="https://dummyimage.com/100/000/fff" alt="placeholder"></img>
-                    <p>9 months PTO</p>
+                    <p>6 - 11 1/2 months PTO</p>
                 </section>
             
 
