@@ -163,8 +163,8 @@ nav a:hover {
   }
 }
 
-/* PRODUCTS */
 
+/* PRODUCTS */
 .products {
   display: flex;
   flex-flow: row wrap;
