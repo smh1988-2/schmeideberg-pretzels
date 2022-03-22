@@ -4,36 +4,32 @@
   box-sizing: border-box;
 }
 
-
 /* GLOBAL */
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  color: #3f292b;
 }
 
 main {
-  padding: 1rem;
   line-height: 1.6;
 }
 
-img {
-  border-radius: 10px;
-}
-
 h2 {
+  font-family: "Merriweather", serif;
   font-size: 2.5rem;
 }
 
-.page-section {
-  padding-bottom: 2.5rem;
+.indented-section {
+  padding: 3rem 2rem 6rem 2rem;
+  background-color: #fdf7ec;
 }
 
-
-/* HEADER */
+/* HEADER / MENU / NAV */
 header {
   display: flex;
   justify-content: flex-start;
-  background: #3F292B;
+  background: #3f292b;
 }
 
 .logo {
@@ -53,17 +49,36 @@ nav ul {
 }
 
 nav li {
-  padding: 1rem 2rem;
+  padding: 1rem 1.2rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
+  position: relative;
 }
 
-nav a:hover {
-  color: #000;
+nav a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 7px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  background: white;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav a:hover::after {
+  width: 80%;
+  background: orange;
 }
 
 .nav-toggle {
@@ -115,7 +130,7 @@ nav a:hover {
   }
 
   nav > ul > a > li {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 0.5rem;
   }
 
   .nav-toggle:checked ~ nav {
@@ -142,27 +157,81 @@ nav a:hover {
 
 .hero {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 50vh;
-  background-color: #DB7F67;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: left;
+  height: 60vh;
+  color: #fff;
+  background-color: #db7f67;
+  background-image: url("./images/pretzel-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(241, 171, 134, 0.5);
 }
 
-.hero > h1 {
-  font-size: 3vw;
+.hero-brand-name {
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  padding: 8rem 2rem 0rem 10rem;
+  text-align: left;
+  margin: 0px;
 }
 
 .hero-text {
-  padding: 15rem;
+  font-family: "Martel", serif;
+  font-size: 3rem;
+  padding: 2rem 0rem 0rem 10rem;
+  max-width: 60rem;
+  margin: 0px;
+}
+
+.hero-cta-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero-cta {
+  border: 2px solid #f7dba7;
+  background: #f7dba7;
+  border-radius: 5px;
+  width: 10rem;
+  font-size: 1.2rem;
+  text-decoration: none;
   text-align: center;
+  padding: 0.5rem 0.5rem;
+  margin: 3rem 10rem;
+  color: #3f292b;
+}
+
+.hero-cta:hover,
+.hero-cta:focus {
+  border: 2px solid rgba(241, 171, 134, 0.2);
+  background-image: linear-gradient(rgba(241, 171, 134, 0.2) 0 0);
 }
 
 @media only screen and (max-width: 940px) {
   .hero > h1 {
-    font-size: 8vw;
+    font-size: 2rem;
+  }
+
+  .hero {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .hero-brand-name {
+    font-family: "Merriweather", serif;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0px;
   }
 }
-
 
 /* PRODUCTS */
 .products {
@@ -181,31 +250,61 @@ nav a:hover {
   margin: 1rem;
 }
 
+.product-item > picture > img {
+  border-radius: 100%;
+}
+
 .product-item > h3 {
   margin: 0rem;
 }
 
-
 /* HISTORY */
+
+.history {
+  background-color: #c57b57;
+  color: #fdf7ec;
+  text-align: center;
+  padding: 6.5rem 10rem;
+}
+
 .history-text {
   padding: 0rem 1rem;
 }
 
+@media only screen and (max-width: 940px) {
+  .history {
+    padding: 4rem 1rem;
+  }
+}
 
 /* DEPARTMENTS */
 .department {
-  width: 75%;
+  width: 70%;
+  max-width: 80vw;
   margin: auto;
   padding-bottom: 3rem;
 }
 
 .department-container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
   align-items: flex-start;
   padding: 0em;
+}
+
+@media only screen and (max-width: 940px) {
+  .department {
+    width: 100%;
+  }
+
+  .department-container {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
 }
 
 .department-picture {
@@ -214,16 +313,22 @@ nav a:hover {
 }
 
 .department-text > h3 {
-  padding: 0rem 1.5rem;
+  padding: 0rem 2rem;
   margin: 0;
 }
 
 .department-text > p {
-  padding: 0rem 1.5rem;
+  padding: 0rem 2rem;
 }
 
-
 /* CAREERS */
+
+.careers-section {
+  background-color: #990D35;
+  padding: 3rem 2rem 6rem 2rem;
+  color: #fff;
+}
+
 .careers {
   width: 100%;
   display: flex;
@@ -244,9 +349,9 @@ nav a:hover {
 }
 
 .careers-cta {
-  border: 2px solid #D34F73;
+  border: 2px solid #d34f73;
   background: #fff;
-  color: #D34F73;
+  color: #d34f73;
   border-radius: 50px;
   font-size: 1.2rem;
   text-decoration: none;
@@ -254,11 +359,10 @@ nav a:hover {
 }
 
 .careers-cta:hover {
-  border: 2px solid #D34F73;
-  background: #D34F73;
+  border: 2px solid #d34f73;
+  background: #d34f73;
   color: #fff;
 }
-
 
 /* FOOTER */
 .page-footer {
