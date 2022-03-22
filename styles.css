@@ -5,6 +5,11 @@
 }
 
 /* GLOBAL */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -62,7 +67,7 @@ nav a {
 nav a::after {
   content: "";
   position: absolute;
-  height: 2px;
+  height: 1px;
   bottom: 7px;
   margin: 0 auto;
   left: 0;
@@ -326,7 +331,7 @@ nav a:hover::after {
 .careers-section {
   background-color: #990D35;
   padding: 3rem 2rem 6rem 2rem;
-  color: #fff;
+  color: #fdf7ec;
 }
 
 .careers {
@@ -349,26 +354,26 @@ nav a:hover::after {
 }
 
 .careers-cta {
-  border: 2px solid #d34f73;
-  background: #fff;
-  color: #d34f73;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
   border-radius: 50px;
   font-size: 1.2rem;
   text-decoration: none;
-  padding: 1rem 2rem;
+  padding: .75rem 1.5rem;
 }
 
 .careers-cta:hover {
-  border: 2px solid #d34f73;
-  background: #d34f73;
-  color: #fff;
+  border: 2px solid #fff;
+  background: #fff;
+  color: #990D35;
 }
 
 /* FOOTER */
 .page-footer {
   background-color: indianred;
   margin: 0rem;
-  padding: 0rem;
+  padding: 4rem 2rem;;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
